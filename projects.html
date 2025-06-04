@@ -60,5 +60,20 @@
   <footer>
     &copy; 2025 Tunde Onikute. All rights reserved.
   </footer>
+
+  <button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑</button>
+
+<script>
+  const btn = document.getElementById("backToTop");
+  window.onscroll = function () {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+</script>
+
+
 </body>
 </html>

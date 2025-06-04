@@ -52,39 +52,42 @@ section h2 {
   margin-bottom: 20px;
 }
 
-/* Home Section */
-.home {
+/* Home (Hero) Section */
+.hero {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   background-color: #e6f2ff;
   gap: 30px;
+  padding: 60px 10%;
 }
 
-.home .intro {
+.intro-text {
   flex: 1;
   min-width: 280px;
 }
 
-.home .intro h2 {
+.intro-text h2 {
   font-size: 32px;
+  color: #0d47a1;
 }
 
-.home .intro p {
+.intro-text p {
   margin-top: 10px;
+  font-size: 1.1rem;
 }
 
-.home .image {
+.intro-image {
   flex: 1;
   min-width: 250px;
   text-align: center;
 }
 
-.home .image img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 50%;
+.intro-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
@@ -219,18 +222,24 @@ footer {
     margin-top: 10px;
   }
 
-  .home, .contact .contact-content, .project-top {
+  .hero,
+  .contact .contact-content,
+  .project-top {
     flex-direction: column;
     text-align: center;
   }
 
-  .home .intro, .contact .contact-text, .contact .contact-image,
-  .project-text, .project-image {
+  .intro-text,
+  .intro-image,
+  .contact .contact-text,
+  .contact .contact-image,
+  .project-text,
+  .project-image {
     width: 100%;
   }
 
-  .home .intro h2 {
-    font-size: 26px;
+  .intro-text h2 {
+    font-size: 1.8rem;
   }
 
   section h2 {
