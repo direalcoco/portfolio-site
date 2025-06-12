@@ -10,25 +10,99 @@
   <header>
     <h1>About Me</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
+      <div class="profile-dropdown">
+  <img src="icons/user-icon.png" alt="Profile" class="profile-icon" />
+  <div class="dropdown-menu">
+    <a href="login.html">Login</a>
+    <a href="signup.html">Sign Up</a>
+  </div>
+</div>
     </nav>
   </header>
 
-  <section class="about-background">
-    <div class="about-content">
-      <h2>Who I Am</h2>
-      <p>
-        I am a student of the University of Ilorin, Faculty of Communication and Information Sciences, Department of Information Technology.
-        This portfolio website is a project for the U-Inspire training program under Mr. Ibrahim.
-      </p>
+  <section class="about">
+  <h2>About Me</h2>
+  <p>
+    I'm an Information Technology student passionate about using tech to solve real-world problems. With experience in web development, data entry, and virtual assistance, I’m committed to continuous learning and delivering quality work.
+  </p>
+</section>
+
+<section class="experience">
+  <h2>Experience</h2>
+
+  <div class="job">
+    <h3>General Virtual Assistant and Data Entry Specialist — Upwork</h3>
+    <p><strong>April 2019 – Present</strong></p>
+    <ul>
+      <li>Provide virtual assistance services to a diverse range of clients, managing schedules, emails, and administrative tasks efficiently.</li>
+      <li>Responded to customer inquiries via phone or email.</li>
+      <li>Generate high-quality content and summaries, adapting to different writing styles and client needs.</li>
+      <li>Provided product/service information and solutions to customers.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <h3>Manager — Gomez Corporate Consults Ltd., Lagos, Nigeria</h3>
+    <p><strong>January 2018 – October 2021</strong></p>
+    <ul>
+      <li>Directed business operations including sales, accounts, customer service, and internet café services (typing, printing, etc.).</li>
+      <li>Handled client legal business documents and registration (business names and certificates).</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <h3>Records Management Intern — AAJ Express Logistics</h3>
+    <p><strong>2024</strong></p>
+    <ul>
+      <li>Efficiently managed and maintained the company's records database, ensuring all entries were accurate, up-to-date, and easily accessible.</li>
+      <li>Identified and implemented improvements in data entry processes, resulting in a 20% increase in efficiency and reduced error rates.</li>
+      <li>Worked closely with the IT and logistics teams to streamline records management processes, facilitating better data sharing and communication across departments.</li>
+      <li>Assisted in preparing for internal and external audits by ensuring all records were complete and accurately documented.</li>
+      <li>Generated regular reports on data entry accuracy, process improvements, and records management metrics to support departmental decision-making.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="education-block">
+    <div class="edu-item">
+      <h3>B.Sc Information Technology</h3>
+      <p><strong>University of Ilorin</strong>, Ilorin, Nigeria</p>
+      <span class="edu-year">2021 – Present</span>
     </div>
-  </section>
+    <div class="edu-item">
+      <h3>Senior School Certificate</h3>
+      <p><strong>First Beulahfield College</strong>, Lagos, Nigeria</p>
+      <span class="edu-year">2016</span>
+    </div>
+  </div>
+</section>
+
+
 
   <footer>
     &copy; 2025 Tunde Onikute. All rights reserved.
   </footer>
 </body>
 </html>
+
+<script>
+  const profileIcon = document.querySelector('.profile-icon');
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+
+  profileIcon.addEventListener('click', () => {
+    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+  });
+
+  // Optional: Hide dropdown if you click outside
+  window.addEventListener('click', function(e) {
+    if (!e.target.closest('.profile-dropdown')) {
+      dropdownMenu.style.display = 'none';
+    }
+  });
+</script>

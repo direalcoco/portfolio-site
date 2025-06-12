@@ -10,10 +10,17 @@
   <header>
     <h1>Projects</h1>
     <nav>
-      <a href="index.html">Home</a>
+      <a href="index.html" class="active">Home</a>
       <a href="about.html">About</a>
-      <a href="projects.html" class="active">Projects</a>
+      <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
+      <div class="profile-dropdown">
+  <img src="icons/user-icon.png" alt="Profile" class="profile-icon" />
+  <div class="dropdown-menu">
+    <a href="login.html">Login</a>
+    <a href="signup.html">Sign Up</a>
+  </div>
+</div>
     </nav>
   </header>
 
@@ -56,6 +63,64 @@
      <p><strong>Data Entry:</strong> Available for data entry services.</p>
   </div>
 
+  <section id="skills" class="skills">
+  <h2>Other Skills</h2>
+  <div class="skills-grid">
+
+    <div class="skill-item">
+      <div class="skill-label">
+        <img src="icons/office.png" alt="Microsoft Office"> Microsoft Office
+      </div>
+      <div class="skill-bar"><div class="skill-fill" style="width: 99%;"></div></div>
+    </div>
+
+    <div class="skill-item">
+      <div class="skill-label">
+        <img src="icons/ginger.png" alt="Ginger Software"> Ginger Software
+      </div>
+      <div class="skill-bar"><div class="skill-fill" style="width: 60%;"></div></div>
+    </div>
+
+    <div class="skill-item">
+      <div class="skill-label">
+        <img src="icons/crm.png" alt="CRM Tools"> CRM Tools (Hubspot, Zendesk, Zoho)
+      </div>
+      <div class="skill-bar"><div class="skill-fill" style="width: 75%;"></div></div>
+    </div>
+
+    <div class="skill-item">
+      <div class="skill-label">
+        <img src="icons/team.png" alt="Team Collaboration"> Team Collaboration
+      </div>
+      <div class="skill-bar"><div class="skill-fill" style="width: 99%;"></div></div>
+    </div>
+
+    <div class="skill-item">
+      <div class="skill-label">
+        <img src="icons/data.png" alt="Data Analysis"> Data Analysis
+      </div>
+      <div class="skill-bar"><div class="skill-fill" style="width: 75%;"></div></div>
+    </div>
+
+    <div class="skill-item">
+      <div class="skill-label">
+        <img src="icons/design.png" alt="Design Tools"> Design Tools (Photoshop, CorelDraw, Canva)
+      </div>
+      <div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div>
+    </div>
+
+    <div class="skill-item">
+      <div class="skill-label">
+        <img src="icons/sql.png" alt="SQL"> SQL
+      </div>
+      <div class="skill-bar"><div class="skill-fill" style="width: 70%;"></div></div>
+    </div>
+
+  </div>
+</section>
+
+
+
 
   <footer>
     &copy; 2025 Tunde Onikute. All rights reserved.
@@ -77,3 +142,20 @@
 
 </body>
 </html>
+
+
+<script>
+  const profileIcon = document.querySelector('.profile-icon');
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+
+  profileIcon.addEventListener('click', () => {
+    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+  });
+
+  // Optional: Hide dropdown if you click outside
+  window.addEventListener('click', function(e) {
+    if (!e.target.closest('.profile-dropdown')) {
+      dropdownMenu.style.display = 'none';
+    }
+  });
+</script>

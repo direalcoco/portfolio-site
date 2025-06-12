@@ -10,18 +10,25 @@
   <header>
     <h1>Contact</h1>
     <nav>
-      <a href="index.html">Home</a>
+      <a href="index.html" class="active">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
-      <a href="contact.html" class="active">Contact</a>
+      <a href="contact.html">Contact</a>
+      <div class="profile-dropdown">
+  <img src="icons/user-icon.png" alt="Profile" class="profile-icon" />
+  <div class="dropdown-menu">
+    <a href="login.html">Login</a>
+    <a href="signup.html">Sign Up</a>
+  </div>
+</div>
     </nav>
   </header>
 
   <section class="contact-section">
     <div class="contact-text">
       <h2>Get In Touch</h2>
-      <p>Email: onikutetunde@gmail.com</p>
-      <p>WhatsApp: +234-706-540-3264</p>
+      <p>Email: <a href="mailto:onikutetunde@gmail.com">onikutetunde@gmail.com</a></p>
+      <p>WhatsApp: <a href="+234-706-540-3264">+234 706 540 3264</a></p>
     </div>
     <div class="contact-image">
       <img src="contact.jpg" alt="Contact Me" />
@@ -33,3 +40,20 @@
   </footer>
 </body>
 </html>
+
+
+<script>
+  const profileIcon = document.querySelector('.profile-icon');
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+
+  profileIcon.addEventListener('click', () => {
+    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+  });
+
+  // Optional: Hide dropdown if you click outside
+  window.addEventListener('click', function(e) {
+    if (!e.target.closest('.profile-dropdown')) {
+      dropdownMenu.style.display = 'none';
+    }
+  });
+</script>

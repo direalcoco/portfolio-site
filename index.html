@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="page-wrapper">
   <header>
     <h1>Tunde Onikute</h1>
     <nav>
@@ -14,6 +15,14 @@
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
+      <div class="profile-dropdown">
+  <img src="icons/user-icon.png" alt="Profile" class="profile-icon" />
+  <div class="dropdown-menu">
+    <a href="login.html">Login</a>
+    <a href="signup.html">Sign Up</a>
+  </div>
+</div>
+
     </nav>
   </header>
 
@@ -26,6 +35,9 @@
     <p>
       With a strong foundation in web development, I'm eager to explore opportunities, collaborate with like-minded individuals, and contribute to innovative projects.
     </p>
+    <p>
+      Versatile general assistant with years of experience providing top-notch administrative support and exceptional customer service. Proven track record of effectively managing tasks and ensuring seamless day-to-day operations. Skilled in communication, problem-solving, and conflict resolution. Committed to delivering outstanding support to teams, clients, and customers, with a strong focus on efficiency, accuracy, and excellence.
+    </p>
   </div>
   <div class="intro-image">
     <img src="me.jpg" alt="Tunde Onikute" />
@@ -35,3 +47,21 @@
 
   <footer>
     &copy; 2025 Tunde Onikute. All rights reserved
+</div>
+</body>
+
+<script>
+  const profileIcon = document.querySelector('.profile-icon');
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+
+  profileIcon.addEventListener('click', () => {
+    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+  });
+
+  // Optional: Hide dropdown if you click outside
+  window.addEventListener('click', function(e) {
+    if (!e.target.closest('.profile-dropdown')) {
+      dropdownMenu.style.display = 'none';
+    }
+  });
+</script>
