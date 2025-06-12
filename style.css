@@ -17,9 +17,9 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Page layout wrapper */
+/* Sticky Footer Wrapper */
 .page-wrapper {
-  min-height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -235,7 +235,7 @@ footer {
   color: #fff;
   text-align: center;
   padding: 20px 10%;
-  margin-top: auto;
+  margin-top: auto; /* Sticky footer magic */
 }
 
 /* Back to Top Button */
@@ -377,34 +377,6 @@ footer {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.skill-item {
-  background-color: #fff;
-  padding: 15px 20px;
-  border-left: 4px solid #004080;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  font-weight: 500;
-  color: #333;
-}
-
-.skills {
-  background-color: #e6f2ff;
-  padding: 60px 10%;
-}
-
-.skills h2 {
-  font-size: 28px;
-  color: #004080;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.skills-grid {
-  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
 }
@@ -445,6 +417,7 @@ footer {
   transition: width 1s ease-in-out;
 }
 
+/* Profile Dropdown */
 .profile-dropdown {
   position: relative;
   display: inline-block;
