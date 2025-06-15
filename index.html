@@ -8,60 +8,49 @@
 </head>
 <body>
   <div class="page-wrapper">
-  <header>
-    <h1>Tunde Onikute</h1>
-    <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-      <div class="profile-dropdown">
-  <img src="user-icon.png" alt="Profile" class="profile-icon" />
-  <div class="dropdown-menu">
-    <a href="login.html">Login</a>
-    <a href="signup.html">Sign Up</a>
+    <header>
+      <h1>Tunde Onikute</h1>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <div class="profile-dropdown">
+          <img src="user-icon.png" alt="Profile" class="profile-icon">
+          <div class="dropdown-menu">
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="intro-text">
+        <h2>Hello, I'm Tunde</h2>
+        <p>An Information Technology student passionate about leveraging technology to solve real‑world problems…</p>
+        <p>With a strong foundation in web development, I'm eager to explore opportunities…</p>
+        <p>Versatile general assistant with years of experience providing top‑notch administrative support…</p>
+      </div>
+      <div class="intro-image">
+        <img src="me.jpg" alt="Tunde Onikute">
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2025 Tunde Onikute. All rights reserved.
+    </footer>
   </div>
-</div>
-    </nav>
 
-  </header>
-
-  <section class="hero">
-  <div class="intro-text">
-    <h2>Hello, I'm Tunde</h2>
-    <p>
-      An Information Technology student passionate about leveraging technology to solve real-world problems—currently honing my skills through hands-on projects and academic pursuits.
-    </p>
-    <p>
-      With a strong foundation in web development, I'm eager to explore opportunities, collaborate with like-minded individuals, and contribute to innovative projects.
-    </p>
-    <p>
-      Versatile general assistant with years of experience providing top-notch administrative support and exceptional customer service. Proven track record of effectively managing tasks and ensuring seamless day-to-day operations. Skilled in communication, problem-solving, and conflict resolution. Committed to delivering outstanding support to teams, clients, and customers, with a strong focus on efficiency, accuracy, and excellence.
-    </p>
-  </div>
-  <div class="intro-image">
-    <img src="me.jpg" alt="Tunde Onikute" />
-  </div>
-</section>
-
-
-  <footer>
-    &copy; 2025 Tunde Onikute. All rights reserved
-</div>
+  <script>
+    const icon = document.querySelector('.profile-icon');
+    const menu = document.querySelector('.dropdown-menu');
+    icon.addEventListener('click', () =>
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block'
+    );
+    window.addEventListener('click', e => {
+      if (!e.target.closest('.profile-dropdown')) menu.style.display = 'none';
+    });
+  </script>
 </body>
-
-<script>
-  const profileIcon = document.querySelector('.profile-icon');
-  const dropdownMenu = document.querySelector('.dropdown-menu');
-
-  profileIcon.addEventListener('click', () => {
-    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
-  });
-
-  // Optional: Hide dropdown if you click outside
-  window.addEventListener('click', function(e) {
-    if (!e.target.closest('.profile-dropdown')) {
-      dropdownMenu.style.display = 'none';
-    }
-  });
-</script>
+</html>
